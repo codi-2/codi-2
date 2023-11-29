@@ -1,0 +1,356 @@
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.vertical-dotted-line {
+    border-left: 5px dotted dimgray;
+    height: 250px; /* Adjust as per your requirement */
+	margin: 20px;
+    /* margin: 0 10px; /* Spacing around the line */ 
+}
+/* ... rest of the CSS above ... */
+
+
+.audio-container {
+	z-index: 2;
+    /* position: relative; */
+    /* display: inline-block;/* or flex, grid, etc., depending on your layout */ */
+}
+
+.image-and-audio-input{
+	z-index: 2;
+	width: 100%;
+    /* position: relative; */
+    /* display: inline-block;/* or flex, grid, etc., depending on your layout */ */
+}
+
+.image-and-audio-output{
+	z-index: 2;
+	width: 30%;
+    /* position: relative; */
+    /* display: inline-block;/* or flex, grid, etc., depending on your layout */ */
+}
+
+.image-and-audio-input audio{
+	z-index: 2;
+	width: 200px;
+    /* position: relative; */
+    /* display: inline-block;/* or flex, grid, etc., depending on your layout */ */
+}
+
+.image-and-audio-output audio{
+	z-index: 2;
+	width: 200px;
+    /* position: relative; */
+    /* display: inline-block;/* or flex, grid, etc., depending on your layout */ */
+}
+
+
+
+.scroll-container {
+  width: 100%; /* Adjust width as necessary */
+  height: 500px; /* Set a fixed height for the scrollable area */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: adds a border around the scrollable container */
+  padding: 10px; /* Optional: adds some space inside the container */
+}
+
+
+#outer-box {
+  /* background-color: #f0f0f0; /* Replace with whatever color you prefer */ */
+  padding: 20px;
+  margin: auto;
+  width: 80%; /* or whatever width you prefer */
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3); /* optional, for a slight shadow */
+  border-radius: 8px; /* optional, for rounded corners */
+  /* border: 2px solid #333; */
+  padding: -100px;
+}
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px;
+  /* background-color: antiquewhite; */
+}
+
+.image-pair {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.caption-container, .input-image-container, .vertical-dotted-line-container, .output-image-container {
+    /* flex: 1; */
+    text-align: center; /* Center the caption */
+	
+}
+
+
+.input-image {
+  max-width: 100%; /* smaller size for the input image */
+  margin: 0 10px;
+  /* border: 1px solid #ddd; /* optional */ */
+  /* padding: 5px; */
+  padding-right: 50px;
+  flex: 1;
+}
+
+.output-image {
+  max-width: 80%; /* larger size for the output image */
+  margin: 0 10px;
+  /* border: 1px solid #ddd; /* optional */ */
+  /* padding: 5px; */
+}
+
+
+.column_demo {
+  float: left;
+  width: 35%;
+  /* padding: 5px; */
+}
+
+.column_arrow {
+	vertical-align: middle;
+  float: left;
+  width: 20%;
+  padding: 5px;
+  height: 100%;
+}
+
+.dotline {
+ border-top: dotted 3px;
+ color: lightgray; 
+  width: 90%;
+}
+
+
+.thickline {
+ border:50px
+ color: black; 
+  width: 90%;
+}
+
+.center_image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 90%;
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 50%;
+}
+
+.arrow_caption {
+    font-size:22pt;
+	padding-top:10pt;
+}
+
+
+.center_caption {
+	z-index: 2;
+      font-size: 30px; 
+	  width: 180px;
+	  padding-right: 80px;
+	  margin-right: -40px;
+	  text-align: center;
+}
+
+.arrow_center {
+ float: left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  /* width: 20%; */
+  /* width: 50%; */
+  /* width: 100; */
+  /* height: 100; */ 
+}
+
+.float-container {
+	width: 30%;
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 33.3%;
+    float: left;
+    padding: 5px;
+    /* border: 2px solid red; */
+}  
+
+/* Clear floats after image containers */
+/* .row::after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+ 
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dnerf {
+  font-variant: small-caps;
+}
+
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+
+.publication-title {
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-header .hero-body {
+}
+
+.publication-title {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Google Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    width: fit-content;
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors {
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-banner img {
+}
+
+.publication-authors {
+  /*color: #4286f4;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.publication-body img {
+}
+
+.results-carousel {
+  overflow: hidden;
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 0;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-video-column {
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}

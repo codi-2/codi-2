@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
+  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoDi-2: Interleaved and In-Context Any-to-Any Generation</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">CoDi-2: Interleaved and In-Context Any-to-Any Generation</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zinengtang.github.io/">Zineng Tang</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://ziyi-yang.github.io/">Ziyi Yang</a><sup>2†</sup>,</span>
+            <span class="author-block">
+			<span class="author-block">
+			  <a href="https://www.microsoft.com/en-us/research/people/mkhademi/">Mahmoud Khademi</a><sup>2†</sup>,</span>
+			<span class="author-block">
+			<span class="author-block">
+			  <a href="https://nlp-yang.github.io/">Yang Liu</a><sup>2†</sup>,</span>
+			<span class="author-block">
+              <a href="https://scholar.google.com/citations?user=1b2kKWoAAAAJ&hl=en">Chenguang Zhu</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://www.cs.unc.edu/~mbansal/">Mohit Bansal</a><sup>1†</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of California at Berkeley,</span>
+            <span class="author-block"><sup>2</sup>Microsoft Azure Cognitive Services Research</span>
+			<span class="author-block"><sup>*</sup> Work done at Microsoft and UNC Chapel Hill. <sup>†</sup>Corresponding Authors</span>
+		  
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+		<div id="mainFrameOne">
+		    <img class='center_image' width="1600" src="static/images/teaser.gif">
+		</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We introduce CoDi-2, a versatile Multimodal Large Language Model (MLLM) that can follow complex multimodal instruction, conduct in-context learning (ICL), reason, chat, edit, etc. in the any-to-any input-output modality paradigm. By aligning modalities with language for both encoding and generation, CoDi-2 seamlessly empowers Large Language Models (LLMs) to not only understand complex modality-interleaved instructions and contextual examples, but also generate grounded and coherent multimodal outputs in an autoregressive manner in the continuous feature space. To train CoDi-2,  we build a large-scale multimodal generation dataset with comprehensive and challenging instructions across language, vision, and audio. CoDi-2 exhibits unprecedented diverse capabilities for multimodal generation, such as in-context learning, reasoning, and compositionality
+            of any-to-any modality generation. It also consistently outperforms 
+            previous domain-specific models on existing tasks e.g., subject-driven image generation, vision transformation, and audio editing, with one unified framework. CoDi-2 marks a significant step towards the `universal multimodal foundation model', by being able to follow nuanced, complex language-vision-audio interleaved instructions and emitting multimodal outputs. 
+			</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+  
+</section>
+
+
+<section class="section">
+	<!-- is-max-desktop -->
+	
+	<div id="outer-box" style="margin-top:100px; padding-bottom:100px">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3" style="padding-top:20pt">Multimodal Generation Demos</h2>
+		
+			
+		<div class="container">
+			<div class="image-pair">
+				<div class="center_caption">
+					Instruction Editing
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/mm1-a.jpg">
+			  <audio controls>
+			  <source src="static/audio/rain_mm.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/mm1-b.png">
+			  </div>
+			</div>
+			<!-- <hr class='thickline'/> -->
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Concept Learning
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/mm2-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/mm2-b.png">
+			  <audio controls>
+			  <source src="static/audio/stir_tea.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			</div>
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Exemplar Learning
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/mm3-a.jpg">
+			  <audio controls>
+			  <source src="static/audio/music0.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/mm3-b.png">
+			  <audio controls>
+			  <source src="static/audio/music1.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			</div>
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Subject Driven
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/mm4-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/mm4-b.gif">
+			  </div>
+			</div>
+	</div>
+	</div>
+	</div>
+	
+	<div id="outer-box" style="margin-top:100px; padding-bottom:100px">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3" style="padding-top:20pt">Image Generation Demos</h2>
+		
+		<div class="container">
+			<div class="image-pair">
+				<div class="center_caption">
+					Exemplar Learning
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image1-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image1-b.png">
+			  </div>
+			</div>
+			<!-- <hr class='thickline'/> -->
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Concept Learning
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image2-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image2-b.png">
+			  </div>
+			</div>
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Subject Driven
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image3-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image3-b.png">
+			  </div>
+			</div>
+			<div class="image-pair">
+				<div class="center_caption">
+					Instruction Editing
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image4-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image4-b.png">
+			  </div>
+			</div>
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Composition
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image5-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image5-b.png">
+			  </div>
+			</div>
+			<div class="image-pair">
+				<div class="center_caption">
+					Reasoning
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/image6-a.jpg">
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/image6-b.png">
+			  </div>
+			</div>
+		  </div>
+	</div>
+	</div>
+	
+	<div id="outer-box" style="margin-top:100px; padding-bottom:100px">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3" style="padding-top:20pt">Audio Generation Demos</h2>
+		
+		<div class="container">
+			<div class="image-pair">
+				<div class="center_caption">
+					Instruction Editing
+				</div>
+				<div class="image-and-audio-input">
+			  <img class="input-image" src="static/images/audio1-a.jpg">
+			  <audio controls>
+			  <source src="static/audio/person_talking.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+			  <img class="output-image" src="static/images/audio1-b.png">
+			  <audio controls>
+			  <source src="static/audio/person_talk_echo.wav" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			  </audio>
+			  </div>
+			</div>
+			<!-- <hr class='thickline'/> -->
+			
+			<div class="image-pair">
+				<div class="center_caption">
+					Exemplar Learning
+				</div>
+				<div class="image-and-audio-input">
+				        <img class="input-image" src="static/images/audio2-a.jpg">
+				        <audio controls>
+				        <source src="static/audio/street0.wav" type="audio/mpeg">
+				        Your browser does not support the audio element.
+				        </audio>
+				        <audio controls>
+				        <source src="static/audio/rain_combined0.wav" type="audio/mpeg">
+				        Your browser does not support the audio element.
+				        </audio>
+				        <audio controls>
+				        <source src="static/audio/street1.wav" type="audio/mpeg">
+				        Your browser does not support the audio element.
+				        </audio>
+				    </div>
+					
+			  <!-- <img class="input-image" src="static/images/audio2-a.jpg"> -->
+			  <div class="vertical-dotted-line"></div>
+			  <div class="image-and-audio-output">
+				<img class="output-image" src="static/images/audio2-b.png">
+				<audio controls>
+				<source src="static/audio/rain_combined1.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+			  </div>
+			</div>
+			
+			<!-- <div class="audio-container">
+			    <audio controls>
+				<source src="static/audio/street0.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+				<audio controls>
+				<source src="static/audio/rain_combined0.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+				<audio controls>
+				<source src="static/audio/street1.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+			</div> -->
+			<!-- <div class="audio-container">
+				<audio controls>
+				<source src="static/audio/rain_combined1.wav" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio>
+			</div> -->
+	</div>
+	</div>
+	</div>
+	
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>article{tang2023anytoany,
+	title={Any-to-Any Generation via Composable Diffusion}, 
+	author={Zineng Tang and Ziyi Yang and Chenguang Zhu and Michael Zeng and Mohit Bansal},
+	year={2023},
+	eprint={2305.11846},
+	archivePrefix={arXiv},
+	primaryClass={cs.CV}
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
