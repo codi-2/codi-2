@@ -106,17 +106,18 @@
 </section>
 
 
-<section class="hero teaser">
+<section>
+	<div id="outer-box" style="margin-top:0px; padding-top:50px; padding-bottom:50px">
   <div class="container is-max-desktop">
-    <div class="hero-body">
-		<div id="mainFrameOne">
-		    <img class='center_image' width="1600" src="static/images/teaser.gif">
-		</div>
-    </div>
+    <!-- <div class="hero-body"> -->
+		    <img class='center_image' style="width:200%; margin:-50px" src="static/images/teaser.gif">
+    <!-- </div> -->
+  </div>
   </div>
 </section>
 
 <section class="section">
+	<div id="outer-box" style="margin-top:0px; padding-top:50px; padding-bottom:50px">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
@@ -132,8 +133,65 @@
       </div>
     </div>
     <!--/ Abstract. -->
+</div>
+  </div>
+  
+</section>
+
+
+<section class="section">
+	<div id="outer-box" style="margin-top:0px; padding-top:50px; padding-bottom:50px">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Model Architecture</h2>
+		<img class='center_image' style="width:50%" src="static/images/main_model.png">
+        <div class="content has-text-justified">
+          <p>
+            CoDi-2 comprises a multimodal large language model that encompasses encoder and decoder for both audio and vision inputs, as well as a large language model. This architecture facilitates the decoding of image or audio inputs using diffusion models. In the training phase, our approach employs pixel loss obtained from the diffusion models alongside token loss, adhering to the standard causal generation loss. 
+			</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
 
   </div>
+   </div>
+  
+</section>
+
+<section class="section">
+	<div id="outer-box" style="margin-top:0px; padding-top:50px; padding-bottom:50px">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Tasks</h2>
+		<!-- <img class='center_image' style="width:50%" src="static/images/main_model.png"> -->
+        <div class="content has-text-justified">
+          <p>
+            Our model shows strong abilities in the following example tasks type which presents a unique approach to prompting models to generate or transform in-context multimodal content, including instructions, images, audio, video, and combinations thereof.
+            <br>
+            <b>A. Zero-Shot Prompting.</b>
+            Zero-shot prompting tasks require the model to reason and generate new content without any prior examples.
+            <br>
+            <b>B. One-Shot/Few-Shot Prompting.</b>
+            One-shot or few-shot prompting provides the model with one or a few examples to learn from before performing a similar task. This method is evident in tasks where the model adapts a learned concept from one image to another or creates a new piece of artwork by understanding the styles depicted in provided exemplars.
+            <br>
+            <b>1. Exemplar learning</b> is a subset of few-shot prompting where the model is explicitly shown an example of the desired output before being asked to apply this learning to a new instance.
+            <br>
+            <b>2. Concept learning</b> involves the model learning from thes shared concept/attributes of given examples, such as artistic styles or patterns, and then creating new content that exhibits similar concept/attributes. 
+            <br>
+            <b>3. Subject-driven learning</b> focus on generating new content based on a set of provided images.
+			</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+  </div>
+   </div>
   
 </section>
 
@@ -141,7 +199,7 @@
 <section class="section">
 	<!-- is-max-desktop -->
 	
-	<div id="outer-box" style="margin-top:100px; padding-bottom:100px">
+	<div id="outer-box" style="margin-top:0px; padding-bottom:100px">
 	<div class="container is-max-desktop">
 		<h2 class="title is-3" style="padding-top:20pt">Multimodal Generation Demos</h2>
 		
