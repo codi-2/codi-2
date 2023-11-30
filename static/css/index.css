@@ -162,11 +162,11 @@ body {
 
 .center_caption {
 	z-index: 2;
-      font-size: 30px; 
-	  width: 180px;
+      font-size: 25px; 
+	  width: 20%;
 	  padding-right: 40px;
 	  margin-right: 0px;
-	  text-align: center;
+	  text-align: left;
 }
 
 .arrow_center {
